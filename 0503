@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class changfangzhu
+{
+private:
+	int length;
+	int width;
+	int height;
+public:
+	void inputlength()
+	{
+		cin >> length;
+	}
+	void inputwidth()
+	{
+		cin >> width;
+	}
+	void inputheight()
+	{
+		cin >> height;
+	}
+	void settiji()
+	{
+		int v = length * width * height;
+		cout << v << endl;
+	}
+};
+int main()
+{
+	changfangzhu a;
+	a.inputlength();
+	a.inputwidth();
+	a.inputheight();
+	a.settiji();
+	return 0;
+}
