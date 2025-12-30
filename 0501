@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class Time
+{private:
+int hour;
+int minute;
+int sec;
+public:
+	void inputtime() {
+		cin >> hour >> minute >> sec;
+	}
+	void outputtime() {
+		cout << hour << minute << sec<<endl;
+	}
+};
+int main()
+{
+Time t;
+t.inputtime();
+t.outputtime();
+return 0;
+}
+数据成员为私有，成员函数为公有。
+简短的函数在类中定义，复杂的函数在类外定义。
