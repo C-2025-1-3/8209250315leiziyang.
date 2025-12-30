@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class student
+{
+private:
+	int xuehao;
+	int score;
+public:
+	void getdata(int x, int s) {
+		xuehao = x;
+		score = s;
+	}
+	int getxuehao()const {
+		return xuehao;
+	}
+	int getscore()const {
+		return score;
+	}
+	void max(student* arr, int n) {
+		int m = 0;
+		for (int i = 0; i < n; i++)
+		{
+			if(arr[i].getscore()>arr[m].getscore())
+				m=i;
+		}
+		cout << "最高成绩学生的学号为：" << arr[m].getxuehao() << endl;
+		cout << "最高成绩为：" << arr[m].getscore() << endl;
+	}
+};
+int main()
+{
+	student arr[5];
+    arr[0].getdata(01, 87.5);
+	arr[1].getdata(01, 88);
+	arr[2].getdata(03, 93);
+	arr[3].getdata(04, 98);
+	arr[4].getdata(05, 91);
+	max( arr, 5);
+	return 0;
+}
